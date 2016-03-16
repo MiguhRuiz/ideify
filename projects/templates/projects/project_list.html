@@ -1,0 +1,12 @@
+<h1>Ideify</h1>
+
+<h2>Proyectos disponibles:</h2>
+
+<ul>
+  {% for project in object_list %}
+  <li>
+    <img src="{{ project.image_URL }}" alt="" />
+    <a href="{% url "projects:detail" project.id %}">{{ project.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
